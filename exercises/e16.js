@@ -11,7 +11,14 @@
 
 export function find(array, callback) {
   // Your code goes here...
-  
+  let final = undefined;
+  for (const element of array) {
+    if (callback(element)) {
+      final = element
+      break
+    }
+  }
+  return final
 }
 
 
